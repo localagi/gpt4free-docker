@@ -1,0 +1,7 @@
+version: "3.9"
+
+services:
+  gpt4free:
+    image: localagi/gpt4free:${GPT4FREE_VERSION:-main}
+    ports:
+      - 8501:8501

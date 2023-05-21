@@ -1,0 +1,27 @@
+name: Publish Docker images
+
+on:
+  push:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  packages: write
+  contents: read
+
+jobs:
+    
+  build-gpt4free:
+    uses: localagi/ai-dedicated-workflows/.github/workflows/operation-docker-build-publish.yml@v2
+    with:
+      registry-repo-name: gpt4free
+      registry-readme: README.docker.md
+      dockerfile: https://raw.githubusercontent.com/xtekky/gpt4free/${{ github.ref }}/Dockerfile
+      context: https://github.com/xtekky/gpt4free.git#${{ github.ref }}
+      tags: |
+        type=schedule
+        type=ref,event=branch
+        type=semver,pattern={{version}}
+      platforms: linux/amd64,linux/arm64/v8
+    secrets: inherit
