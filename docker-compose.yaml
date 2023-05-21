@@ -2,6 +2,12 @@ version: "3.9"
 
 services:
   gpt4free:
+    #### fix for https://github.com/xtekky/gpt4free/issues/586
+    command: ""
+    entrypoint: ./entrypoint.sh
+    volumes:
+      - ./entrypoint.sh:/root/gpt4free/entrypoint.sh
+    #####
     image: localagi/gpt4free:${GPT4FREE_VERSION:-main}
     ports:
       - 8501:8501
