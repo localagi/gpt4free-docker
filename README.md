@@ -4,8 +4,6 @@ Sophisticated docker builds for parent project [xtekky/gpt4free](https://github.
 
 ![example workflow](https://github.com/localagi/gpt4free-docker/actions/workflows/publish-docker.yml/badge.svg?branch=main)
 
-###### (*Parent* projects docker state for tracking: ![example workflow](https://github.com/xtekky/gpt4free/actions/workflows/ci.yml/badge.svg?branch=main) )
-
 Easy setup. Compatible. Tweakable. Scaleable.
 
 #### Supported platforms
@@ -42,3 +40,7 @@ Open an issue on the [Issue Tracker](../../issues)
 
 ## Limitations
 We cannot support issues regarding the base software. Please refer to the main project page mentioned in the second line of this card.
+
+## Appendix
+###### (*Parent* projects docker state for tracking: ![example workflow](https://github.com/xtekky/gpt4free/actions/workflows/ci.yml/badge.svg?branch=main) )
+
